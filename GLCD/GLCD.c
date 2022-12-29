@@ -707,8 +707,7 @@ void LCD_DrawRectangle_empty(uint16_t x0, uint16_t y0, uint16_t lenght, uint16_t
 	
 }
 
-void pixel(uint16_t xc,uint16_t yc,uint16_t x,uint16_t y, uint16_t color)
-{
+void pixel(uint16_t xc,uint16_t yc,uint16_t x,uint16_t y, uint16_t color){
 	LCD_SetPoint(xc+x,yc+y,color);
 	LCD_SetPoint(xc+x,yc-y,color);
 	LCD_SetPoint(xc-x,yc+y,color);
@@ -719,8 +718,7 @@ void pixel(uint16_t xc,uint16_t yc,uint16_t x,uint16_t y, uint16_t color)
 	LCD_SetPoint(xc-y,yc-x,color);
 }
 
-void LCD_DrawCircle_empty(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint16_t color)
-{
+void LCD_DrawCircle_empty(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint16_t color){
 	int x=0;
 	int y=radius;
 	int p=1-radius;
@@ -744,6 +742,8 @@ void LCD_DrawCircle_empty(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint16_t
 	}
 }
 
+
+
 void LCD_DrawSemiCircle(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint16_t color,int orientation){
 	
 	volatile double distance=0;
@@ -765,6 +765,9 @@ void LCD_DrawSemiCircle(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint16_t c
 		}
 }
 
+
+
+
 void LCD_DrawSemiCircle_empty(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint16_t color,int orientation){
 	
 	volatile double distance=0;
@@ -785,6 +788,13 @@ void LCD_DrawSemiCircle_empty(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint
 		}
 }
 
+
+
+
+
+
+
+
 void LCD_DrawCircle(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint16_t color){
 	
 	volatile double distance=0;
@@ -802,24 +812,6 @@ void LCD_DrawCircle(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint16_t color
 		}
 }
 
-/*void LCD_DrawCircle_empty(uint16_t x0,uint16_t y0, uint16_t radius, uint16_t color){
-	
-	volatile double distance=0;
-    volatile uint16_t i,j;
-	
-
-	 
-    for(i=0;i<MAX_X;i++){
-			for(j=0;j<MAX_Y;j++){
-        distance=((i-x0)*(i-x0))+((y0-j)*(y0-j));
-        if(distance==radius*radius){
-            LCD_SetPoint(i,j,color);
-        }
-    }
-	}    	
-	
-}
-*/
 
 
 void LCD_MyDrawLine(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color) {

@@ -48,7 +48,7 @@ int main(void)
 //XMAX=240  YMAX=320
 	LCD_Clear(White);
 	
-	LCD_DrawSemiCircle_empty(100,100,20,Black,1);
+
 	create_tamagochy(120,160,80,Black);
 	
 	init_RIT(0x004C4B40);									/* RIT Initialization 50 msec       */

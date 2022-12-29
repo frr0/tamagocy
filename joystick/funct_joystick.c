@@ -32,7 +32,7 @@ void eat_snack(void){
 	draw_snack();
 	
 	
-	delete_tamagocy(xc,yc,radius,White);
+	/*delete_tamagocy(xc,yc,radius,White);
 	draw_tamagocy_hungry(xc,yc,radius,Black);
 
 	for(i=1;i<50;i++){
@@ -40,7 +40,7 @@ void eat_snack(void){
 		draw_tamagocy(xc-i,yc,radius,Black);
 		delete_tamagocy(xc-i,yc,radius,White);
 	}
-	
+	*/
 	
 	
 }
